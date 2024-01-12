@@ -1,25 +1,21 @@
-pipeline{
-agent any
-stages
-{
-stage('Build')
-{
-steps
-{
-echo "Me AdS is in Build"
-echo "Lets test pipeline"
-sh "ls -ltr"
-sh "pwd"
-sh"docker build -t nginx ."
-sh"docker image ls | grep nginx"
-
-}
-}
-stage("Deploy"){
-steps{
-echo "I am in Deploy"
-}
-}
-}
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo "Me AdS is in Build"
+                echo "Lets test pipeline"
+                sh "ls -ltr"
+                sh "pwd"
+                sh "docker build -t nginx ."
+                sh "docker image ls | grep nginx"
+            }
+        }
+        stage("Deploy") {
+            steps {
+                echo "I am in Deploy"
+            }
+        }
+    }
 }
 
