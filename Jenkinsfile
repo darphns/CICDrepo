@@ -7,6 +7,7 @@ stage('Build')
 steps
 {
 echo "Me AdS is in Build"
+echo "Lets test pipeline"
 
 }
 }
