@@ -8,7 +8,7 @@ steps
 {
 echo "Me AdS is in Build"
 echo "Lets test pipeline"
-
+sh "ls -ltr"
 }
 }
 stage("Deploy"){
