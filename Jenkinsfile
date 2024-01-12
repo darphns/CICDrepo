@@ -9,6 +9,10 @@ steps
 echo "Me AdS is in Build"
 echo "Lets test pipeline"
 sh "ls -ltr"
+sh "pwd"
+sh"docker build -t nginx ."
+sh"docker image ls | grep nginx"
+
 }
 }
 stage("Deploy"){
