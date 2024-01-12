@@ -7,9 +7,9 @@ pipeline {
                 echo "Lets test pipeline"
                 sh "ls -ltr"
                 sh "pwd"
-                sh "docker build -t aadarnginximg ."
-                sh "docker image ls | grep aadarnginximg"
-                sh "docker run -dit --name adsphpcon -p81:80 aadarnginximg
+                sh "docker build -t nginx ."
+                sh "docker image ls | grep nginx"
+                sh "docker run -dit --name adsphpcon -p81:80 nginx
 	   }
         }
         stage("Deploy") {
