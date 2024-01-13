@@ -9,7 +9,8 @@ pipeline {
                 sh "pwd"
                 sh "docker build -t nginx ."
                 sh "docker image ls | grep nginx"
-		sh "docker stop adsphpcon && docker rm adsphpcon"
+		sh "docker stop adsphpcon"
+		sh "docker rm adsphpcon"
                 sh "docker run -dit --name adsphpcon -p80:80 nginx"
 	   }
         }
