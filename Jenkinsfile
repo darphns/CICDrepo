@@ -17,7 +17,6 @@ pipeline {
 	stage("Deploy") {
             steps {
                 echo "I am in Deploy"
-		sh"docker stop adsphpcon"
             }
         }
     }
