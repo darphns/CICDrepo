@@ -11,7 +11,7 @@ pipeline {
                 sh "docker image ls | grep nginx"
 		sh "docker stop adsphpcon"
 		sh "docker rm adsphpcon"
-                sh "docker run -dit --name adsphpcon -p81:80 nginx"
+                sh "docker run -dit --name adsphpcon -p85:80 nginx"
 	   }
         }
 	stage("Deploy") {
